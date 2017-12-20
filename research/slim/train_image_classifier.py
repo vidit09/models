@@ -371,6 +371,8 @@ def _get_variables_to_train():
     return tf.trainable_variables()
   else:
     scopes = [scope.strip() for scope in FLAGS.trainable_scopes.split(',')]
+ # for var in tf.trainable_variables():
+ #   print(var.name)
 
   variables_to_train = []
   for scope in scopes:
